@@ -29,3 +29,13 @@ $ ngu generate home
 ```
 $ ngu serve
 ```
+
+### What's working?
+
+- [x] Scaffolding project (with options such as --skipNpm)
+- [x] Generating *.md inside `./md` (see nguconfig.json)
+- [x] Serving a local dev server
+- [x] Using a configfile `nguconfig.json`
+- [ ] Generating routes from file.md
+- [ ] Using configfile in app (overriding css, title...)
+- [ ] Loading *.md files in app (documentation)
