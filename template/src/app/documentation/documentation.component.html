@@ -1,0 +1,67 @@
+<md-toolbar class="bg-green--500">
+  <button *ngIf="site?.links" class="toolbar__button button--full-height" md-button color="accent">
+    <a class="flex button--link" href="{{ site?.links?.home }}">
+      <img src="/src/angular-logo-with-text.svg" alt="angular logo">
+      <span class="uppercase button__text--name font-weight--300">{{ site?.title }}</span>
+    </a>
+  </button>
+
+  <input type="checkbox" id="site-nav-checkbox" class="visuallyhidden">
+  <div class="top-nav-wrapper">
+    <label md-button for="site-nav-checkbox" class="toolbar__button button--full-height bg-green--500 button--last-child">SITE MENU</label>
+    <nav class="mdl-navigation">
+      <button class="hide-sm toolbar__button button--full-height" *ngFor="let route of site?.routes" md-button color="accent">
+        <a class="font-weight--300 uppercase button--link mdl-navigation__link" [routerLink]="[ '../'+route.href ]">{{ route.text }}</a>
+      </button>
+      <span class="toolbar__spacer"></span>
+
+      <button *ngIf="site?.links" class="hide-sm toolbar__button button--full-height bg-green--500 button--last-child" md-button color="accent">
+        <a target="_blank" class="font-weight--300 uppercase button--link" href="{{ site?.links?.github }}">Preview on GitHub</a>
+      </button>
+    </nav>
+  </div>
+
+</md-toolbar>
+<!-- Hero -->
+<div class="flex center vertical-center hero hero-sm width--full">
+  <div class="flex flex-col--center flex-col-sm hero__container">
+    <div *ngIf="view?.hero?.logo" class="hero__img-container">
+      <img class="width-xsm" src="{{ view?.hero?.logo?.src }}" alt="{{ view?.hero?.logo?.alt }}">
+    </div>
+    <div class="hero__spacer"></div>
+    <div class="hero__text text-align--center-sm">
+      <h1 class="font-weight--400">{{ view?.hero?.title }}</h1>
+      <p class="font-weight--300">{{ view?.hero?.description }}</p>
+      <button *ngIf="view?.hero?.logo" md-raised-button class="button--cta">
+        <a target="_blank" class="green--900 font-weight--400 uppercase button--link" href="{{ site?.links?.github }}">
+          Preview on GitHub
+        </a>
+      </button>
+    </div>
+  </div>
+</div>
+<!-- Main Section -->
+<div class="flex column flex-col--center l-main-section l-main-section-sm">
+  <div class="flex column content" ngu-markdown [src]="view?.documentation">
+    <!-- <div *ngFor="let feature of site?.views?.home?.features; let i = index">
+      <h2 class="blue-grey-800">{{ feature.title }}</h2>
+      <p>{{ feature.text }}</p>
+    </div> -->
+  </div>
+  <div *ngIf="site?.links" class="content__cta">
+    <button md-raised-button class="bg-green--500 button--cta">
+      <a target="_blank" class="button--link font-weight--400 uppercase" href="{{ site?.links?.github }}">Preview on GitHub</a>
+    </button>
+  </div>
+</div>
+<footer>
+  <div class="flex flex-col-sm footer__container">
+    <div class="item--left-most item--left-most-sm flex">
+      <img src="/src/angular-logo.svg" alt="angular logo">
+      <button md-button color="primary"><a class="button--link"  href="https://angular.io/">Learn Angular</a></button>
+    </div>
+    <div class="powered-by powered-by-sm item--right-most item--right-most-sm">
+      <p class="white">Powered by Google ©2010-2016. Code licensed under an MIT-style License. Documentation licensed under CC BY 4.0.</p>
+    </div>
+  </div>
+</footer>

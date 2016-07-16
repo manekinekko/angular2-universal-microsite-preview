@@ -1,0 +1,37 @@
+{
+  "version": "",
+  "documentation": "",
+  "site": {
+    "title": "Universal",
+    "links": {
+      "github": "https://github.com/angular/universal/",
+      "home": "/"
+    },
+    "views": {
+      "home": {
+        "hero": {
+          "logo": {
+            "src": "/src/universal-logo.svg",
+            "alt": "Angular Universal"
+          },
+          "title": "Angular Universal",
+          "description": "Server-side Rendering for Angular 2 apps"
+        },
+        "documentation": "static/documentation/universal/home.md"
+      },
+      "overview": {
+        "hero": {
+          "title": "Overview"
+        },
+        "documentation": "static/documentation/universal/overview.md"
+      },
+      "quickstart": {
+        "hero": {
+          "title": "Getting Started"
+        },
+        "documentation": "static/documentation/universal/quickstart.md"
+      }
+    }
+  }
+
+}
