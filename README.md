@@ -6,7 +6,7 @@ Use this CLI tool to scaffold a microsite project with Angular2 Universal suppor
 ### Install
 
 ```
-npm i -g https://github.com/manekinekko/angular2-universal-microsite-preview.git
+npm i -g angular2-universal-microsite-preview
 ```
 
 ### Usage
