@@ -1,9 +1,17 @@
 {
   "name": "angular2-universal-microsite-preview",
-  "version": "0.0.0",
+  "version": "0.0.0-alpha.0",
+  "private": false,
+  "bin": {
+    "ngu": "index.js"
+  },
   "description": "A project generator for angular2 microsites using universal",
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "colors": "^1.1.2",
+    "commander": "^2.9.0",
+    "fs-extra": "^0.30.0"
+  },
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
