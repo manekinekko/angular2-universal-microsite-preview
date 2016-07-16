@@ -21,13 +21,11 @@ $ cd awesome-app
 2) Generate a new document file
 
 ```
-$ cd awesome-app
-$ ng generate home
+$ ngu generate home
 ```
 
 3) Start a local dev server
 
 ```
-$ cd awesome-app
-$ ng serve
+$ ngu serve
 ```
